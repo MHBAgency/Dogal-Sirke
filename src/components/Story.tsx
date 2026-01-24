@@ -33,7 +33,7 @@ export function Story() {
                     >
                         <span className="text-amber-600 font-bold tracking-widest uppercase text-sm">Bizim Hikayemiz</span>
                         <h2 className="font-serif text-4xl md:text-5xl font-bold text-stone-800 mt-2 mb-6">
-                            Dalından Şişeye <br />El Değmeden...
+                            Dalından Şişeye <br />Geleneksel Yöntemlerle...
                         </h2>
                         <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
                             <p>

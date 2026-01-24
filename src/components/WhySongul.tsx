@@ -23,7 +23,7 @@ const features = [
     {
         icon: CheckCircle2,
         title: "Şekersiz Bal ile Üretim",
-        description: "Sadece kendi kovanlarımızdan elde ettiğimiz katkısız bal kullanılır."
+        description: "Sadece en saf ve doğal, katkısız bal kullanılır."
     }
 ];
 
@@ -67,7 +67,7 @@ export function WhySongul() {
                     >
                         <h2 className="font-serif text-4xl md:text-5xl font-bold text-stone-800 mb-6">Neden Songül Büber'in Sirkeleri?</h2>
                         <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-2xl">
-                            Bizi diğerlerinden ayıran en önemli özellik, üretim sürecindeki şeffaflığımız ve anne eli değmiş gibi özenli yaklaşımımızdır.
+                            Bizi diğerlerinden ayıran en önemli özellik, üretim sürecindeki şeffaflığımız ve geleneksel yöntemlere sadık kalan özenli yaklaşımımızdır.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">

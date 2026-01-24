@@ -55,12 +55,12 @@ export function SecretHoney() {
 
                         <div className="space-y-6 text-lg text-amber-50 leading-relaxed font-light">
                             <p>
-                                Piyasadaki sirkelerden en büyük farkımız mayalanma sürecidir. Sirkelerimizi maliyeti düşürmek için şekerle değil, Songül Hanım'ın kendi arılarından elde ettiği gerçek bal ile mayalıyoruz.
+                                Piyasadaki sirkelerden en büyük farkımız mayalanma sürecidir. Sirkelerimizi maliyeti düşürmek için şekerle değil, güvenilir arıcılardan temin edilen gerçek, doğal bal ile mayalıyoruz.
                             </p>
 
                             <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border-l-4 border-amber-200">
                                 <p className="font-serif italic text-xl">
-                                    "Arılara asla şeker verilmez, bal %100 doğaldır. Bu da sirkenin probiyotik değerini ve lezzetini zirveye taşır."
+                                    "Doğal bal, sirkenin probiyotik değerini ve lezzetini zirveye taşır. Şeker değil, şifa mayalıyoruz."
                                 </p>
                             </div>
                         </div>

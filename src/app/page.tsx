@@ -9,8 +9,8 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const products = [
-    { id: "apple", title: "Elma", price: "4000 ₸", description: "Bozkırın serin rüzgarlarında yetişen, ilaçsız, mumsuz doğal elmalar ve şekersiz bal. Tam 1 yıl fermente edildi.", imageSrc: "/apple-vinegar.png" },
-    { id: "pear", title: "Armut", price: "4000 ₸", description: "Yabani armutların kekremsi tadı, balın yumuşaklığıyla buluştu. Böbrek dostu, sindirim uzmanı.", imageSrc: "/pear-vinegar.png" },
+    { id: "apple", title: "Elma", price: "4000 ₸", description: "Bozkırın serin rüzgarlarında yetişen, ilaçsız, mumsuz doğal elmalar ve şekersiz bal.", imageSrc: "/apple-vinegar.png" },
+    { id: "pear", title: "Armut", price: "4000 ₸", description: "Doğal armutların kekremsi tadı, balın yumuşaklığıyla buluştu. Böbrek dostu, sindirim uzmanı.", imageSrc: "/pear-vinegar.png" },
     { id: "grape", title: "Üzüm", price: "4000 ₸", description: "Güneşin tadını içine çekmiş siyah üzümlerin antioksidan gücü. Kan yapıcı, enerji veren bir iksir.", imageSrc: "/grape-vinegar.png" },
   ];
 
