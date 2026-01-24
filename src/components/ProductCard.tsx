@@ -1,5 +1,11 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { Plus, HeartPulse } from "lucide-react";
+import Image from "next/image";
+import { useCart } from "@/context/CartContext";
 import { BenefitsModal } from "./BenefitsModal";
-import { HeartPulse } from "lucide-react";
 
 interface ProductCardProps {
     title: string;
