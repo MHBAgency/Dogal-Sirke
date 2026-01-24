@@ -9,9 +9,45 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const products = [
-    { id: "apple", title: "Elma", price: "4000 ₸", description: "Bozkırın serin rüzgarlarında yetişen, ilaçsız, mumsuz doğal elmalar ve şekersiz bal.", imageSrc: "/apple-vinegar.png" },
-    { id: "pear", title: "Armut", price: "4000 ₸", description: "Doğal armutların kekremsi tadı, balın yumuşaklığıyla buluştu. Böbrek dostu, sindirim uzmanı.", imageSrc: "/pear-vinegar.png" },
-    { id: "grape", title: "Üzüm", price: "4000 ₸", description: "Güneşin tadını içine çekmiş siyah üzümlerin antioksidan gücü. Kan yapıcı, enerji veren bir iksir.", imageSrc: "/grape-vinegar.png" },
+    {
+      id: "apple",
+      title: "Elma",
+      price: "4000 ₸",
+      description: "Bozkırın serin rüzgarlarında yetişen, ilaçsız, mumsuz doğal elmalar ve şekersiz bal.",
+      imageSrc: "/apple-vinegar.png",
+      benefits: [
+        "Metabolizmayı hızlandırarak kilo kontrolüne yardımcı olur.",
+        "Kan şekerini dengelemeye destek sağlar.",
+        "Sindirim sistemini rahatlatır ve probiyotik etkisiyle bağırsak florasını korur.",
+        "Antioksidan özelliğiyle bağışıklık sistemini güçlendirir."
+      ]
+    },
+    {
+      id: "pear",
+      title: "Armut",
+      price: "4000 ₸",
+      description: "Doğal armutların kekremsi tadı, balın yumuşaklığıyla buluştu. Böbrek dostu, sindirim uzmanı.",
+      imageSrc: "/pear-vinegar.png",
+      benefits: [
+        "Böbrek kumlarını dökmeye yardımcı olur ve böbrek sağlığını destekler.",
+        "Güçlü bir ödem atıcıdır, vücuttaki şişkinliği alır.",
+        "Sinir sistemini yatıştırır ve rahatlatıcı etkisi vardır.",
+        "Cilt sağlığını destekleyerek parlaklık kazandırır."
+      ]
+    },
+    {
+      id: "grape",
+      title: "Üzüm",
+      price: "4000 ₸",
+      description: "Güneşin tadını içine çekmiş siyah üzümlerin antioksidan gücü. Kan yapıcı, enerji veren bir iksir.",
+      imageSrc: "/grape-vinegar.png",
+      benefits: [
+        "Güçlü bir antioksidan kaynağıdır, hücre yenilenmesini destekler.",
+        "Kan yapıcı özelliği ile bilinir, demir emilimini artırır.",
+        "Vücuda doğal enerji verir ve yorgunluğu alır.",
+        "Kalp ve damar sağlığını korumaya yardımcı olur."
+      ]
+    },
   ];
 
   return (
@@ -35,6 +71,7 @@ export default function Home() {
               description={product.description}
               price={product.price}
               imageSrc={product.imageSrc}
+              benefits={product.benefits}
             />
           ))}
         </div>

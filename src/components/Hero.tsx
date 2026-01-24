@@ -48,7 +48,7 @@ export function Hero() {
                         <span className="italic text-amber-400">Şifa Kaynağı Sirkeler</span>
                     </h1>
                     <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed font-light drop-shadow-md">
-                        En seçkin bahçelerden toplanan meyveler ve <span className="font-semibold text-amber-300">doğal şekersiz bal ile</span>, geleneksel yöntemlerle kuruldu. Koruyucu yok, acele yok, sadece saf lezzet.
+                        En seçkin bahçelerden toplanan meyveleri, <span className="font-semibold text-amber-300">doğal şekersiz bal ile</span> geleneksel yöntemlerle mayalıyoruz. Koruyucu yok, acele yok; sadece sabır ve saf lezzet var.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
