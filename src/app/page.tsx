@@ -14,7 +14,7 @@ export default function Home() {
       title: "Elma",
       price: "4000 ₸",
       description: "Bozkırın serin rüzgarlarında yetişen, ilaçsız, mumsuz doğal elmalar ve şekersiz bal.",
-      imageSrc: "/apple-vinegar.png",
+      imageSrc: "/img/Elma Sirkesi.webp",
       benefits: [
         "Metabolizmayı hızlandırarak kilo kontrolüne yardımcı olur.",
         "Kan şekerini dengelemeye destek sağlar.",
@@ -27,7 +27,7 @@ export default function Home() {
       title: "Armut",
       price: "4000 ₸",
       description: "Doğal armutların kekremsi tadı, balın yumuşaklığıyla buluştu. Böbrek dostu, sindirim uzmanı.",
-      imageSrc: "/pear-vinegar.png",
+      imageSrc: "/img/Armut Sirkesi.webp",
       benefits: [
         "Böbrek kumlarını dökmeye yardımcı olur ve böbrek sağlığını destekler.",
         "Güçlü bir ödem atıcıdır, vücuttaki şişkinliği alır.",
@@ -40,7 +40,7 @@ export default function Home() {
       title: "Üzüm",
       price: "4000 ₸",
       description: "Güneşin tadını içine çekmiş siyah üzümlerin antioksidan gücü. Kan yapıcı, enerji veren bir iksir.",
-      imageSrc: "/grape-vinegar.png",
+      imageSrc: "/img/Üzüm Sirkesi.webp",
       benefits: [
         "Güçlü bir antioksidan kaynağıdır, hücre yenilenmesini destekler.",
         "Kan yapıcı özelliği ile bilinir, demir emilimini artırır.",

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function SecretHoney() {
     return (
-        <section className="py-24 bg-amber-500 relative overflow-hidden">
+        <section id="secret-honey" className="py-24 bg-amber-500 relative overflow-hidden">
             {/* Decorative Hexagons */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-10 left-10"><Hexagon className="w-32 h-32 fill-current text-white" /></div>

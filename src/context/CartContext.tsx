@@ -87,7 +87,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }, 0);
 
     const getWhatsAppUrl = () => {
-        const phoneNumber = "77071116738"; // +7 707 111 67 38
+        const phoneNumber = "77026379594"; // +7 702 637 9594
         let message = "Merhaba, doğal sirke siparişi vermek istiyorum! 🌿\n\nSepetim:\n";
 
         items.forEach(item => {

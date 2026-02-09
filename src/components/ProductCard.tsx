@@ -2,10 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Plus, HeartPulse } from "lucide-react";
+import { Plus } from "lucide-react";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
-import { BenefitsModal } from "./BenefitsModal";
+import { ChevronDown, Check } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 
 interface ProductCardProps {
     title: string;
@@ -19,7 +20,7 @@ interface ProductCardProps {
 export function ProductCard({ title, description, price, imageSrc, type, benefits }: ProductCardProps) {
     const { addToCart } = useCart();
     const [quantity, setQuantity] = React.useState(1);
-    const [isModalOpen, setIsModalOpen] = React.useState(false);
+    const [isExpanded, setIsExpanded] = React.useState(false);
 
     const handleAddToCart = () => {
         addToCart({
@@ -38,7 +39,7 @@ export function ProductCard({ title, description, price, imageSrc, type, benefit
                 whileHover={{ y: -10 }}
                 className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl transition-all duration-300"
             >
-                <div className="h-80 relative flex items-center justify-center overflow-hidden bg-muted/20">
+                <div className="aspect-square relative flex items-center justify-center overflow-hidden bg-muted/20">
                     <Image
                         src={imageSrc}
                         alt={title}
@@ -47,14 +48,6 @@ export function ProductCard({ title, description, price, imageSrc, type, benefit
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    {/* Benefits Trigger Button */}
-                    <button
-                        onClick={() => setIsModalOpen(true)}
-                        className="absolute top-4 right-4 bg-white/90 backdrop-blur text-amber-600 p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:bg-amber-500 hover:text-white z-10"
-                        title="Faydaları Görüntüle"
-                    >
-                        <HeartPulse className="w-5 h-5" />
-                    </button>
                 </div>
 
                 <div className="p-6">
@@ -66,9 +59,43 @@ export function ProductCard({ title, description, price, imageSrc, type, benefit
                         <span className="font-bold text-lg text-primary">{price}</span>
                     </div>
 
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                         {description}
                     </p>
+
+                    {/* Expandable Benefits Section */}
+                    <div className="mb-6">
+                        <button
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className="flex items-center gap-2 text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+                        >
+                            <span>Faydaları {isExpanded ? "Gizle" : "Gör"}</span>
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
+                            />
+                        </button>
+
+                        <AnimatePresence>
+                            {isExpanded && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    className="overflow-hidden"
+                                >
+                                    <ul className="pt-3 space-y-2">
+                                        {benefits.map((benefit, index) => (
+                                            <li key={index} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                                <Check className="w-3.5 h-3.5 text-green-600 mt-0.5 shrink-0" />
+                                                <span className="leading-tight">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
 
                     {/* Quantity controls and Add to Cart button */}
                     <div className="flex gap-3">
@@ -98,12 +125,6 @@ export function ProductCard({ title, description, price, imageSrc, type, benefit
                 </div>
             </motion.div>
 
-            <BenefitsModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                title={title}
-                benefits={benefits}
-            />
         </>
     );
 }

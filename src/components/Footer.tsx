@@ -7,8 +7,8 @@ export function Footer() {
                     <p className="text-sm mt-2 opacity-60">Doğadan gelen sağlık, sofranıza lezzet.</p>
                 </div>
                 <div className="flex gap-6 text-sm">
-                    <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-                    <a href="#" className="hover:text-primary transition-colors">İletişim</a>
+                    <a href="https://www.instagram.com/songulbuber/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+                    <a href="https://wa.me/77026379594" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">İletişim</a>
                     <a href="#" className="hover:text-primary transition-colors">Gizlilik</a>
                 </div>
             </div>

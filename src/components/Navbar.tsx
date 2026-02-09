@@ -14,6 +14,21 @@ export function Navbar() {
 
     const itemCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            const headerOffset = 80; // height of sticky header + some breathing room
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    };
+
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -22,11 +37,20 @@ export function Navbar() {
                 </Link>
 
                 <div className="flex items-center gap-6">
-                    <Link href="/#products" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
+                    <Link href="/#why-songul" onClick={(e) => scrollToSection(e, "why-songul")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
+                        Niçin Biz?
+                    </Link>
+                    <Link href="/#products" onClick={(e) => scrollToSection(e, "products")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
                         Ürünlerimiz
                     </Link>
-                    <Link href="/#why-honey" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
+                    <Link href="/#story" onClick={(e) => scrollToSection(e, "story")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
+                        Hikayemiz
+                    </Link>
+                    <Link href="/#secret-honey" onClick={(e) => scrollToSection(e, "secret-honey")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
                         Neden Ballı?
+                    </Link>
+                    <Link href="/#contact" onClick={(e) => scrollToSection(e, "contact")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden md:block">
+                        İletişim
                     </Link>
                     <div className="relative group">
                         <Link href="/cart" className="p-2 -mr-2 text-foreground hover:text-primary transition-colors relative block">

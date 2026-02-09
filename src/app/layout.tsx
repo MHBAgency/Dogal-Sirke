@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { CartProvider } from "@/context/CartContext";
 import { Toaster } from "sonner";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <Toaster position="top-center" richColors />
+          <FloatingWhatsApp />
         </CartProvider>
       </body>
     </html>

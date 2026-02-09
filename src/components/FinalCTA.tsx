@@ -5,7 +5,7 @@ import { Instagram, MessageCircle } from "lucide-react";
 
 export function FinalCTA() {
     return (
-        <section className="py-24 bg-stone-900 text-white text-center relative overflow-hidden">
+        <section id="contact" className="py-24 bg-stone-900 text-white text-center relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -20,7 +20,7 @@ export function FinalCTA() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="https://wa.me/77071116738"
+                            href="https://wa.me/77026379594"
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-[#20bd5a] transition-all hover:scale-105"
@@ -29,7 +29,7 @@ export function FinalCTA() {
                             WhatsApp ile Sipariş Ver
                         </a>
                         <a
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/songulbuber/"
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white rounded-full font-bold text-lg hover:opacity-90 transition-all hover:scale-105"
